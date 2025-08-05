@@ -1,0 +1,300 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   SDG 3: Good Health and Well-being - AI Mental Wellness Chatbot
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Nunito", sans-serif;
+      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Scrollbar for chat */
+    #chat-messages {
+      scrollbar-width: thin;
+      scrollbar-color: #f8b500 #fceabb;
+    }
+    #chat-messages::-webkit-scrollbar {
+      width: 8px;
+    }
+    #chat-messages::-webkit-scrollbar-track {
+      background: #fceabb;
+      border-radius: 4px;
+    }
+    #chat-messages::-webkit-scrollbar-thumb {
+      background-color: #f8b500;
+      border-radius: 4px;
+    }
+  </style>
+ </head>
+ <body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-white bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-30">
+   <nav aria-label="Primary Navigation" class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a class="text-3xl font-extrabold text-yellow-700 tracking-wide select-none" href="#">
+     SDG 3: Good Health &amp; Well-being
+    </a>
+    <ul class="hidden md:flex space-x-8 font-semibold text-yellow-800">
+     <li>
+      <a class="hover:text-yellow-600 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-600 transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-600 transition" href="#chatbot">
+       Chatbot
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-600 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+    <button aria-label="Toggle menu" class="md:hidden text-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </nav>
+   <div class="hidden md:hidden bg-yellow-100 bg-opacity-80 border-t border-yellow-300" id="mobile-menu">
+    <ul class="flex flex-col space-y-3 p-4 font-semibold text-yellow-800">
+     <li>
+      <a class="block hover:text-yellow-600 transition" href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-600 transition" href="#projects">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-600 transition" href="#chatbot">
+       Chatbot
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-600 transition" href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto px-6 py-16 gap-12" id="about">
+   <div class="max-w-xl text-center md:text-left space-y-6">
+    <h1 class="text-5xl font-extrabold text-yellow-900 leading-tight">
+     AI-Powered Mental Wellness Chatbot
+    </h1>
+    <p class="text-yellow-800 text-lg leading-relaxed">
+     Addressing the lack of mental health support among youth by providing a
+        friendly AI chatbot for mental wellness check-ins and guidance.
+    </p>
+    <a class="inline-block bg-yellow-700 hover:bg-yellow-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition" href="#chatbot">
+     Try the Chatbot
+    </a>
+   </div>
+   <img alt="Young person smiling and using a smartphone with an AI chatbot interface visible on the screen, warm ambient lighting" class="rounded-xl shadow-lg w-full max-w-md object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e43b2f5-5ffc-40bf-d18a-10eedc803523.jpg" width="600"/>
+  </section>
+  <!-- Projects Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 bg-yellow-100 bg-opacity-70 rounded-3xl shadow-lg mb-16" id="projects">
+   <h2 class="text-4xl font-extrabold text-yellow-900 mb-10 text-center">
+    AI Project Ideas &amp; Relevance
+   </h2>
+   <div class="grid gap-12 md:grid-cols-2">
+    <article aria-label="AI agent for mental health screening and support" class="bg-white rounded-xl shadow-md p-8 flex flex-col hover:shadow-xl transition" tabindex="0">
+     <div class="flex items-center space-x-4 mb-6">
+      <i class="fas fa-brain text-yellow-700 text-4xl">
+      </i>
+      <h3 class="text-2xl font-semibold text-yellow-900">
+       AI Agent for Mental Health Screening and Support
+      </h3>
+     </div>
+     <p class="text-yellow-800 flex-grow">
+      Develop an AI-powered chatbot that screens mental health and provides
+          support and guidance to reduce stress and anxiety, especially among
+          youth.
+     </p>
+     <img alt="Illustration of a friendly AI chatbot interface providing mental health support with warm colors and smiling user" class="mt-6 rounded-lg shadow-md object-cover w-full" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c4c5b37-d8c4-4957-f27e-fd9e37c4e662.jpg" width="400"/>
+    </article>
+    <article aria-label="AI agent for early disease detection" class="bg-white rounded-xl shadow-md p-8 flex flex-col hover:shadow-xl transition" tabindex="0">
+     <div class="flex items-center space-x-4 mb-6">
+      <i class="fas fa-stethoscope text-yellow-700 text-4xl">
+      </i>
+      <h3 class="text-2xl font-semibold text-yellow-900">
+       AI Agent for Early Disease Detection
+      </h3>
+     </div>
+     <p class="text-yellow-800 flex-grow">
+      Use machine learning on health data and symptom checkers to detect
+          diseases early, improving treatment outcomes and reducing healthcare
+          costs.
+     </p>
+     <img alt="Conceptual image of AI analyzing health data streams for early disease detection with warm tones" class="mt-6 rounded-lg shadow-md object-cover w-full" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9f7caa99-e204-44ff-30a8-225911a85e65.jpg" width="400"/>
+    </article>
+   </div>
+  </section>
+  <!-- Chatbot Section -->
+  <section aria-label="AI Mental Wellness Chatbot" class="max-w-4xl mx-auto px-6 py-16 bg-white bg-opacity-90 rounded-3xl shadow-lg mb-20" id="chatbot">
+   <h2 class="text-4xl font-extrabold text-yellow-900 mb-8 text-center">
+    Mental Wellness Chatbot
+   </h2>
+   <div class="flex flex-col border border-yellow-300 rounded-lg overflow-hidden shadow-inner max-h-[600px]" id="chat-container">
+    <div aria-atomic="false" aria-live="polite" class="flex-grow p-6 space-y-4 overflow-y-auto bg-yellow-50" id="chat-messages">
+     <!-- Chat messages will appear here -->
+    </div>
+    <form aria-label="Send message form" class="flex border-t border-yellow-300 bg-yellow-100 p-4" id="chat-form">
+     <input aria-label="User message input" autocomplete="off" class="flex-grow rounded-l-lg border border-yellow-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="user-input" name="user-input" placeholder="How are you feeling today? Ask me anything..." required="" type="text"/>
+     <button aria-label="Send message" class="bg-yellow-700 hover:bg-yellow-800 text-white font-bold px-6 rounded-r-lg transition" type="submit">
+      <i class="fas fa-paper-plane">
+      </i>
+     </button>
+    </form>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section aria-label="Contact information" class="max-w-4xl mx-auto px-6 py-16 text-yellow-900" id="contact">
+   <h2 class="text-4xl font-extrabold mb-8 text-center">
+    Contact &amp; Support
+   </h2>
+   <p class="text-center max-w-2xl mx-auto mb-6">
+    For more information or support, please reach out to our team. We are
+      committed to improving mental health and well-being through AI-driven
+      solutions.
+   </p>
+   <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-3xl mx-auto">
+    <a class="flex items-center justify-center gap-3 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition" href="mailto:support@sdg3-ai.org">
+     <i class="fas fa-envelope">
+     </i>
+     Email Support
+    </a>
+    <a class="flex items-center justify-center gap-3 bg-yellow-700 hover:bg-yellow-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition" href="https://www.who.int/health-topics/mental-health" rel="noopener noreferrer" target="_blank">
+     <i class="fas fa-globe">
+     </i>
+     WHO Mental Health
+    </a>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-yellow-700 text-yellow-100 py-6 text-center select-none">
+   © 2024 SDG 3 Initiative — AI Mental Wellness Chatbot
+  </footer>
+  <!-- Mobile menu toggle script -->
+  <script>
+   const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+  <!-- Simple AI Chatbot Frontend + Backend Simulation -->
+  <script>
+   const chatForm = document.getElementById("chat-form");
+    const chatMessages = document.getElementById("chat-messages");
+    const userInput = document.getElementById("user-input");
+
+    // Simulated AI responses for demo purposes
+    const aiResponses = [
+      "I'm here to listen. How are you feeling today?",
+      "Remember, it's okay to take breaks and breathe deeply.",
+      "Would you like some tips on managing stress?",
+      "You're not alone. Many people feel this way sometimes.",
+      "Try to focus on positive things around you. What made you smile recently?",
+      "If you want, I can guide you through a short mindfulness exercise.",
+      "It's important to talk about your feelings. I'm here to help.",
+      "Would you like resources for professional mental health support?",
+      "Taking small steps every day can make a big difference.",
+      "Thank you for sharing with me. How else can I support you?"
+    ];
+
+    // Append message to chat window
+    function appendMessage(sender, text) {
+      const messageEl = document.createElement("div");
+      messageEl.classList.add("max-w-[80%]", "px-4", "py-3", "rounded-lg", "break-words");
+      if (sender === "user") {
+        messageEl.classList.add(
+          "bg-yellow-500",
+          "text-yellow-900",
+          "self-end",
+          "rounded-tr-none"
+        );
+        messageEl.setAttribute("aria-label", "User message");
+      } else {
+        messageEl.classList.add(
+          "bg-yellow-200",
+          "text-yellow-900",
+          "self-start",
+          "rounded-bl-none"
+        );
+        messageEl.setAttribute("aria-label", "AI response");
+      }
+      messageEl.textContent = text;
+      chatMessages.appendChild(messageEl);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Simulate AI response with delay
+    function getAIResponse(userText) {
+      // Simple keyword-based logic for demo
+      const lowerText = userText.toLowerCase();
+      if (
+        lowerText.includes("stress") ||
+        lowerText.includes("anxiety") ||
+        lowerText.includes("sad") ||
+        lowerText.includes("depressed")
+      ) {
+        return "I'm sorry you're feeling this way. Would you like some breathing exercises or tips to help?";
+      }
+      if (lowerText.includes("hello") || lowerText.includes("hi")) {
+        return "Hello! How can I support your mental wellness today?";
+      }
+      if (lowerText.includes("help")) {
+        return "I'm here to help. Tell me more about how you're feeling.";
+      }
+      // Default random response
+      return aiResponses[Math.floor(Math.random() * aiResponses.length)];
+    }
+
+    chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const userText = userInput.value.trim();
+      if (!userText) return;
+      appendMessage("user", userText);
+      userInput.value = "";
+      userInput.disabled = true;
+
+      // Simulate AI thinking delay
+      setTimeout(() => {
+        const aiText = getAIResponse(userText);
+        appendMessage("ai", aiText);
+        userInput.disabled = false;
+        userInput.focus();
+      }, 1200);
+    });
+
+    // Initial greeting
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        appendMessage(
+          "ai",
+          "Hello! I'm your AI mental wellness assistant. How are you feeling today?"
+        );
+      }, 800);
+    });
+  </script>
+ </body>
+</html>
